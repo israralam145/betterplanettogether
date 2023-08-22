@@ -1,0 +1,606 @@
+:root {
+    --size: 150px;
+    --clrFirstSpin: #00d179;
+    --clrSecondSpin: #5febb0;
+    --clrThirdSpin: #d0f3e4;
+    --displayingTextTime: 2500ms;
+    --spinnerFont: calc(var(--size)/10);
+}
+
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #00d179 !important;
+    border-color: #00d179 !important;
+    border-radius: 40px !important;
+}
+
+.navbar .nav-link:hover {
+    color: #00d179;
+}
+
+.navbar .active > .nav-link, .navbar .nav-link.active, .navbar .nav-link.show, .navbar .show > .nav-link {
+    color: #00d179;
+}
+
+
+
+
+a:hover {
+    color: #00d179;
+    text-decoration: none;
+}
+
+.navbar-vertical .navbar-nav.nav-tabs .active .nav-link, .navbar-vertical .navbar-nav.nav-tabs .active.nav-link {
+    border-left-color: #00d179;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #00d179;
+    background-color: transparent;
+    border-color: transparent transparent #00d179;
+}
+
+.nav-link:hover {
+    color: #00d179;
+}
+
+.btn-link:hover {
+    color: #00d179;
+    text-decoration: none;
+}
+
+.btn-link {
+    font-weight: 400;
+    color: #00d179;
+    text-decoration: none;
+}
+
+.toggle-switch-input:checked + .toggle-switch-label {
+    background-color: #00d179;
+}
+
+.badge-success {
+    background-color: #00d179;
+}
+
+a {
+    color: #00d179
+}
+
+.nav-indicator-icon:hover {
+    color: #00d179
+}
+
+.btn-ghost-secondary.focus, .btn-ghost-secondary:active, .btn-ghost-secondary:focus, .btn-ghost-secondary:hover {
+    color: #00d179 !important;
+}
+
+.nav-indicator-icon.focus, .nav-indicator-icon:active, .nav-indicator-icon:focus, .nav-indicator-icon:hover {
+    color: #00d179 !important;
+}
+
+.text-medium {
+    color: #677788;
+}
+
+.tio-circle:after, .tio-circle:hover, .tio-circle:focus, .tio-circle:active, .tio-circle.focus {
+    color: #00d179 !important;
+}
+
+
+.avatar-xl {
+    width: 5.92188rem;
+    height: 5.92188rem;
+}
+
+.card-body {
+    padding-bottom: 10px;
+}
+
+.card-text-small {
+    font-size: 0.650rem;
+    color: #677788;
+}
+
+.default-card-bg {
+    background-color: #F1FDF8;
+}
+
+.flocard-green {
+    color: #00d179 !important;
+}
+
+.card-text-small:hover {
+    color: #00d179 !important;
+}
+
+/* ------------ Tags CSS ------------ */
+
+.tag-pad-primary {
+    padding-top: 10px;
+}
+
+.tag-top-pad {
+    padding-top: 45px;
+}
+
+.tag-primary {
+    color: black !important;
+    background-color: #F0F0F0 !important;
+    border-radius: 40px !important;
+    overflow-wrap: normal;
+    font-size: small;
+    display: inline-block;
+    pointer-events: none;
+}
+
+.tag-curve-primary {
+    padding: 0.15rem 0.5rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
+}
+
+.tag-horizontal {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
+}
+
+/* ------------ Card Flip CSS ------------ */
+
+.flip-box {
+    background-color: transparent;
+}
+
+
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+
+.flip-box.hover .flip-box-inner {
+    transform: rotateY(180deg);
+}
+
+
+.flip-box-front, .flip-box-back {
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+.flip-box-front {
+    z-index: 1;
+}
+
+
+.flip-box-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.flip-sender-details {
+    font-size: small;
+}
+
+.flip-add-itemPaddng {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+
+/* ------------ Carousel CSS ------------ */
+
+.carousel-color {
+    font-size: 40px;
+    color: black;
+}
+
+.carousel-indicators-numbers > li {
+    text-indent: 0;
+    margin: 0 2px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 100%;
+    line-height: 30px;
+    color: #fff;
+    background-color: #00d179 !important;
+    transition: all 0.25s ease;
+    margin: 0 2px;
+    width: 30px;
+    height: 30px;
+    background-color: #337ab7;
+}
+
+
+.custom-carousel-indicators {
+    position: unset;
+    right: unset;
+    bottom: unset;
+    z-index: unset;
+}
+
+.custom-carousel-button-wrapper {
+    height: fit-content;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* ------------ Update Page Text Area CSS ------------ */
+.textArea-Pad {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+
+/* ------------ Flip FAQ Image CSS ------------ */
+.adjust-image-size {
+    height: 50%;
+    width: 80%;
+}
+
+
+/* ------------ Update Page Padding CSS ------------ */
+.textArea-Pad {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+}
+
+
+/* ++++++++++++++ Adjust Gif Size ++++++++++++++ */
+.adjust-gif-treeP {
+    height: 20% !important;
+    width: 20% !important;
+}
+
+/* ++++++++++++++ Adjust Gif Size for IntroJS ++++++++++++++ */
+.adjust-gif-Intro-JS {
+    height: 70% !important;
+    width: 100% !important;
+}
+
+/* ++++++++++++++ Adjust Pointer for IntroJS ++++++++++++++ */
+.adjust-Pointer-IntroJS {
+    cursor: pointer !important;
+}
+
+/* ------------ Step Form CSS ------------ */
+.stepForm-btn {
+    border-radius: 40px !important;
+    position: relative;
+}
+
+.stepForm-btn-color {
+    background-color: #00d179 !important;
+    border-color: #00d179 !important;
+}
+
+.step-item.active.focus span {
+    background-color: #00d179 !important;
+    border-color: #00d179 !important;
+}
+
+.firstEdit-hide {
+    display: none !important;
+}
+
+.firstEdit-disable-hover {
+    pointer-events: none !important;
+}
+
+.firstEdit-profile-Strength {
+    font-size: smaller;
+}
+
+.firstEdit-fotter-bottom-pad {
+    padding-bottom: 19px;
+}
+
+/* ------------ Search Bar CSS ------------ */
+.search-bar-size-adjust {
+    width: 100% !important;
+}
+
+.Center-Align-Contacts-Elements {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+/* ------------ Span Title word break CSS ------------ */
+.span-Word-break {
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.navBar-element-placement {
+    margin-left: 0.5rem;
+}
+
+
+/* --------------- Adjusting Trigger Buttons --------------- */
+
+.avatar-delete-trigger-left {
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.avatar-uploader-trigger-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+/*.tncpara {
+    font-family: 'Avenir', Helvetica, sans-serif;
+    font-size: 17px;
+    padding: 0 15px;
+}*/
+@media (min-width: 1200px) and (max-width: 1600px) {
+
+    .row-cols-xl-3 > * {
+        -ms-flex: 0 0 43.33333%;
+        flex: 0 0 43.33333%;
+        max-width: 43.33333%;
+    }
+}
+
+.avatar-img {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/*Spinner Start*/
+.spinnerContainer {
+    justify-content: center;
+    align-items: center;
+    display: none;
+    position: absolute;
+}
+
+.spinnerOverlay {
+    backdrop-filter: blur(5px);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--size);
+    height: var(--size);
+    position: absolute;
+    top: -16vh;
+    z-index: 2;
+}
+
+.spinner-area {
+    border: 5px solid transparent;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    animation: rotate var(--duration) var(--timing) infinite;
+    mix-blend-mode: overlay;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner-third {
+    border-top-color: var(--clrThirdSpin);
+    --duration: 1.5s;
+    --timing: ease-in;
+}
+
+.spinner-second {
+    border-left-color: var(--clrSecondSpin);
+    --duration: 2s;
+    --timing: ease-in
+}
+
+.spinner-first {
+    border-bottom-color: var(--clrFirstSpin);
+    --duration: 3s;
+    --timing: ease-in-out
+}
+
+.spinner p img {
+    font-size: var(--spinnerFont);
+    text-transform: none;
+    animation: displaying-text var(--displayingTextTime) ease-in-out infinite;
+    color: #fff;
+}
+
+.spinner p img {
+    width: 40px;
+    height: 40px;
+}
+
+@keyframes displaying-text {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@media screen and (max-width: 310px) {
+    :root {
+        --size: 80px;
+    }
+
+    .spinner {
+        position: absolute;
+        left: 10px;
+    }
+
+    .spinner-area {
+        border: 2px solid transparent;
+        position: absolute;
+        top: -2vh;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .spinner {
+        position: absolute;
+        left: -10px;
+    }
+
+    /*    #cardImageTrigger button {
+        font-size: 10px;
+    }*/
+}
+
+@media screen and (max-width: 280px) {
+
+    .spinner {
+        position: absolute;
+        left: 10px;
+    }
+
+    .spinner-area {
+        border: 2px solid transparent;
+        position: absolute;
+    }
+}
+
+#viewOnBlockChain:hover {
+    color: #00d179 !important;
+}
+
+@media screen and (max-width: 500px) {
+
+    #action-icons-container {
+        padding: 1.5rem 0rem !important;
+    }
+
+    #zoomIn {
+        margin: 0 0rem !important;
+    }
+
+    #rotateRight {
+        margin: 0 0rem !important;
+    }
+
+    #flipHorizontal {
+        margin: 0 0rem !important;
+    }
+}
+
+.btnn {
+    color: #00d179 !important;
+    border: 1px solid #eee !important;
+    background: white;
+}
+
+.btnn:hover {
+    color: white !important;
+    background: #00d179 !important;
+}
+
+@media screen and (max-width: 300px) {
+    .upload__btn {
+        padding: 0.44688rem 0.675rem !important;
+        font-size: .75rem !important;
+        line-height: 1.2 !important;
+        margin: 0 !important
+    }
+
+    .btn-icon-small {
+        font-size: .72969rem !important;
+        font-weight: 300 !important;
+        width: 2rem !important;
+        height: 2rem !important;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #qr-image-1 {
+        max-width: 3rem !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #qr-image-1 {
+        max-width: 2rem !important;
+        top: 0.8rem !important;
+        right: 2.6rem !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #qr-image-1 {
+        max-width: 1rem !important;
+        top: 0.4rem !important;
+        right: 2.4rem !important;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    #qr-image-1 {
+        max-width: 0.6rem !important;
+        top: 0.3rem !important;
+        right: 2.2rem !important;
+    }
+}
+.card:hover {
+    /* Add shadow styles when hovering */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transform: scale(1.00);
+    border: 2px rgba(60, 54, 54 0.5);
+}
+
+.btn-primary:hover {
+    /* Define the styles you want to apply when hovering */
+    box-shadow: 0 0 10px rgba(300, 10, 10, 0.5);
+    /* Add any other desired styles */
+}
+
+card-title {
+    font-size: 16px;
+}
+
+
+
+#headinstitution {
+    position: absolute;
+    top: 30px;
+    left: 85px;
+}
+
