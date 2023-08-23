@@ -154,80 +154,108 @@
             .child2 {
                 color: mediumseagreen;
             }
+
+            .sdg-image img {
+                width: 122px;
+                margin: 2px 0 2px 0;
+            }
+
+            .sdg-image {
+                display: flex;
+                width: 122px;
+                margin: auto 2px auto 2px;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                padding: 0;
+            }
+
+
+            .section {
+                margin-top: 4em;
+                margin-bottom: 4em;
+
+            }
+
+            .preview-content {
+                border-radius: 9px;
+                padding: 20px;
+                background-color: #E5243B;
+                justify-content: space-between;
+            }
+
+            .preview-text {
+                font-size: 16px;
+                /* Set the initial font size */
+
+                overflow: hidden;
+                /* Hide overflowing text */
+                text-overflow: ellipsis;
+                /* Add ellipsis (...) for truncated text */
+            }
+
+            .col {
+                flex-grow: 0;
+            }
+
+            img {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            .sdg-image img {
+                padding: 0;
+            }
+
+            /* Hide desktop-sdg on mobile view */
+            @media (max-width: 991px) {
+                #desktop-sdg {
+                    display: none;
+                }
+
+                h1 {
+                    padding: 1em;
+                }
+
+                p {
+                    font-size: 14px;
+                }
+
+                #Collaborations img {
+                    width: 100px;
+                }
+            }
+
+            /* Hide mobile-sdg on desktop view */
+            @media (min-width: 992px) {
+                #mobile-sdg {
+                    display: none;
+                }
+
+                #Collabrations {
+                    margin-left: 25%;
+                    margin-right: 25%;
+                }
+            }
+
+            .text-body {
+                color: #fff !important;
+            }
         </style>
         <main id="content" role="main">
+
+            <!-- ========== CONTENT ========== -->
             <div class="position-relative bg-flocard overflow-hidden">
+
                 <div
                     class="container position-relative z-index-2 space-top-2 space-top-md-3 space-bottom-2 space-bottom-md-3">
                     <h1>Know the SDGs</h1>
                     <style>
-                        .sdg-image img {
-                            width: 122px;
-                            margin: 2px 0 2px 0;
-                        }
 
-                        .sdg-image {
-                            display: flex;
-                            width: 122px;
-                            margin: auto 2px auto 2px;
-                            flex-direction: column;
-                            align-items: center;
-                            justify-content: center;
-                            text-align: center;
-                            padding: 0;
-                        }
-
-                        .preview-content {
-                            border-radius: 9px;
-                            padding: 20px;
-                            background-color: #E5243B;
-                            justify-content: space-between;
-                        }
-
-                        .preview-text {
-                            font-size: 16px;
-                            /* Set the initial font size */
-
-                            overflow: hidden;
-                            /* Hide overflowing text */
-                            text-overflow: ellipsis;
-                            /* Add ellipsis (...) for truncated text */
-                        }
-
-                        .col {
-                            flex-grow: 0;
-                        }
-
-                        /* Hide desktop-sdg on mobile view */
-                        @media (max-width: 991px) {
-                            #desktop-sdg {
-                                display: none;
-                            }
-
-                            h1 {
-                                padding: 1em;
-                            }
-                            p{
-                                font-size: 14px;
-                            }
-                        }
-
-                        /* Hide mobile-sdg on desktop view */
-                        @media (min-width: 992px) {
-                            #mobile-sdg {
-                                display: none;
-                            }
-                            #Collabrations{
-                                margin-left: 25%;
-                                margin-right: 25%;
-                            }
-                        }
-
-                        .text-body {
-                            color: #fff !important;
-                        }
                     </style>
 
+                    <!-- ========== DESKTOP SDG VIEW ========== -->
                     <div id="desktop-sdg" class="container section row">
                         <div class="container row col-md-8 col-sm-12 col" style="max-height: 650px; margin: 2px;">
                             <div class="sdg-image col"
@@ -319,8 +347,10 @@
                         </div>
                         <div class="content-preview col-sm-12 col-md-12 col-lg-4 row col">
                             <div class="preview-content" style="max-height: 500px; background-color: #E5243B;">
-                                <img class="preview-image sdg-image" src="/img/flocard/SDG1-No-Poverty.png" alt="Preview Image">
-                                <p class="preview-text">Support SDG 1 (No Poverty) by establishing a strong foundation of healthy, well-managed forests, watersheds, and soils.</p>
+                                <img class="preview-image sdg-image" src="/img/flocard/SDG1-No-Poverty.png"
+                                    alt="Preview Image">
+                                <p class="preview-text">Support SDG 1 (No Poverty) by establishing a strong foundation
+                                    of healthy, well-managed forests, watersheds, and soils.</p>
                                 <a href="">
                                     <p style="text-align: end; color: #fff;">Know More</p>
                                 </a>
@@ -346,7 +376,10 @@
                             </p>
                         </div>
                     </div>
+                    <!-- ========== END DESKTP SDG VIEW ========== -->
 
+
+                    <!-- ========== MOBILE SDG VIEW ========== -->
                     <div id="mobile-sdg" style="padding-top: 2em; padding-bottom: 2em;" class="row">
                         <div class="col-lg-12">
 
@@ -717,37 +750,39 @@
                         </div>
 
                     </div>
+                    <!-- ========== END MOBILE SDG ========== -->
 
-                    <div class="container-fluid">
 
-                        
 
-                        <div
-                            style="height: 0.75rem; flex-shrink: 0; opacity: 0.2; background: radial-gradient(50% 50.00% at 50% 50.00%, #D9D9D9 0%, rgba(217, 217, 217, 0.00) 100%);">
-                        </div>
 
-                        <div class="container section">
-                            <h1 class="text-center">Global Challenges</h1>
-                            <div class="container row justify-content-center col-md-12"
-                                style="padding-top: 2em; padding-bottom: 2em;">
-                                <div class="col text-center">
-                                    <img src="/img/flocard/climateCrisis.png" alt="">
-                                    <p>Climate Crisis</p>
-                                </div>
-                                <div class="col text-center">
-                                    <img src="/img/flocard/climateCrisis.png" alt="">
-                                    <p>Climate Crisis</p>
-                                </div>
-                                <div class="col text-center">
-                                    <img src="/img/flocard/climateCrisis.png" alt="">
-                                    <p>Climate Crisis</p>
-                                </div>
-                                <div class="col text-center">
-                                    <img src="/img/flocard/climateCrisis.png" alt="">
-                                    <p>Climate Crisis</p>
-                                </div>
+                    <!-- ========== HORIZONTAL LINE ========== -->
+                    <div
+                        style="height: 0.75rem; flex-shrink: 0; opacity: 0.2; background: radial-gradient(50% 50.00% at 50% 50.00%, #D9D9D9 0%, rgba(217, 217, 217, 0.00) 100%);">
+                    </div>
+
+                    <!-- ========== GLOBAL CHALLENGES ========== -->
+                    <div class="container section">
+                        <h1 class="text-center">Global Challenges</h1>
+                        <div class="container row justify-content-center col-md-12"
+                            style="padding-top: 2em; padding-bottom: 2em;">
+                            <div class="col text-center">
+                                <img src="/img/flocard/climateCrisis.png" alt="">
+                                <p>Climate Crisis</p>
                             </div>
-                            <!-- <div class="container row" style="padding-left: 4em; padding-right: 4em;">
+                            <div class="col text-center">
+                                <img src="/img/flocard/climateCrisis.png" alt="">
+                                <p>Climate Crisis</p>
+                            </div>
+                            <div class="col text-center">
+                                <img src="/img/flocard/climateCrisis.png" alt="">
+                                <p>Climate Crisis</p>
+                            </div>
+                            <div class="col text-center">
+                                <img src="/img/flocard/climateCrisis.png" alt="">
+                                <p>Climate Crisis</p>
+                            </div>
+                        </div>
+                        <!-- <div class="container row" style="padding-left: 4em; padding-right: 4em;">
                             <div class="col col-sm-8 col-md-12">
                                 <p style="font-size: 18px; font-weight: 400; line-height: 32px;">
                                     Introducing #betterplanettogether campaign’s new sustainability challenges! Join us in addressing the crisis and achieving the SDGs. Each week/month, we will share challenges covering environmental conservation, responsible consumption, social equality, daily waste management and many others revolving around the different SDGs. Grab the opportunity to make a difference and create a sustainable future by participating in these challenges and be our “Planet Hero.”  
@@ -757,119 +792,165 @@
                                 <a href=""><p style="color: #00D179; padding-top: 25%; padding-bottom: 25%;">Learn More</p></a>
                             </div>
                         </div> -->
-                            <div class="row col col-sm-12 col-md-12 globalChallenges text">
-                                <p style="font-weight: 400; line-height: 32px; text-align: center;">
-                                    Introducing #betterplanettogether campaign’s new sustainability challenges! Join us
-                                    in
-                                    addressing the crisis and achieving the SDGs. Each week/month, we will
-                                    share challenges
-                                    covering environmental conservation, responsible consumption, social equality, daily
-                                    waste management and many others revolving around the different SDGs. Grab the
-                                    opportunity to make a difference and create a sustainable future by participating in
-                                    these challenges and be our “Planet Hero.”  
-                                </p>
+                        <div class="row col col-sm-12 col-md-12 globalChallenges text">
+                            <p style="font-weight: 400; line-height: 32px; text-align: center;">
+                                Introducing #betterplanettogether campaign’s new sustainability challenges! Join us
+                                in
+                                addressing the crisis and achieving the SDGs. Each week/month, we will
+                                share challenges
+                                covering environmental conservation, responsible consumption, social equality, daily
+                                waste management and many others revolving around the different SDGs. Grab the
+                                opportunity to make a difference and create a sustainable future by participating in
+                                these challenges and be our “Planet Hero.”  
+                            </p>
 
-                            </div>
+                        </div>
+                        <div style="padding-top: 50px;">
                             <a href="">
                                 <p style="color: #00D179;text-align: center;">Learn More</p>
                             </a>
                         </div>
+                    </div>
 
-                        <div
-                            style="height: 0.75rem; flex-shrink: 0; opacity: 0.2; background: radial-gradient(50% 50.00% at 50% 50.00%, #D9D9D9 0%, rgba(217, 217, 217, 0.00) 100%);">
-                        </div>
+                    <!-- ========== END GLOBAL CHALLENGES ========== -->
 
-                        <div class="container section row col-sm-12"">
-                            <div class="container text-center col-lg-6 ">
-                                <h1 style="padding-bottom: 2em;">Be a Planet Hero</h1>
-                                <p>A platform where we provide a platform for you to create content for your
-                                    sustainability
-                                    challenges, get your challenges reviewed and be a Planet Hero!</p>
+                    <!-- ========== HORIZONTAL LINE ========== -->
+                    <div
+                        style="height: 0.75rem; flex-shrink: 0; opacity: 0.2; background: radial-gradient(50% 50.00% at 50% 50.00%, #D9D9D9 0%, rgba(217, 217, 217, 0.00) 100%);">
+                    </div>
+
+
+                    <!-- ========== BE A PLANET HERO ========== -->
+                    <div class="container section row col-sm-12"">
+                            <div class=" container text-center col-lg-6 ">
+                                <h1 style=" padding-bottom: 2em;">Be a Planet Hero</h1>
+                        <p>A platform where we provide a platform for you to create content for your
+                            sustainability
+                            challenges, get your challenges reviewed and be a Planet Hero!</p>
+                    </div>
+                    <div class="container col col-lg-2">
+                        <img src="/img/flocard/planetHero.png" alt="">
+                    </div>
+                </div>
+
+                <!-- ========== END BE A PLANET HERO ========== -->
+
+                <div
+                    style="height: 0.75rem; flex-shrink: 0; opacity: 0.2; background: radial-gradient(50% 50.00% at 50% 50.00%, #D9D9D9 0%, rgba(217, 217, 217, 0.00) 100%);">
+                </div>
+
+                <!-- ========== COLLABORATIONS ========== -->
+                <div id="Collaborations"
+                    class="container section text-center align-items-center justify-content-center">
+                    <h1>Collaborations</h1>
+                    <div class="row col-sm-12 col-lg-12"
+                        style="width: 100%; display: flex; justify-content: center; align-items: center; margin-top: 2em;">
+                        <div class="col col-lg-4 col-sm-6 text-center">
+                            <div class="container"
+                                style="border-radius: 340px; background: radial-gradient(50% 50.00% at 50% 50.00%, #00D179 0%, rgba(30, 32, 34, 0.00) 100%);">
+                                <img src="/img/flocard/crowd-of-users 1.svg" alt="">
                             </div>
-                            <div class="container col col-lg-2">
-                                <img src="/img/flocard/planetHero.png" alt="">
-                            </div>
-
-                        </div>
-
-                        <div
-                            style="height: 0.75rem; flex-shrink: 0; opacity: 0.2; background: radial-gradient(50% 50.00% at 50% 50.00%, #D9D9D9 0%, rgba(217, 217, 217, 0.00) 100%);">
-                        </div>
-
-                        <div id="Collaborations" class="container section text-center align-items-center justify-content-center">
-                            <h1>Collaborations</h1>
-                            <div class="row col-sm-12 col-lg-12" style="width: 100%; display: flex; justify-content: center; align-items: center; margin-top: 2em;">
-                                <div class="col col-lg-4 col-sm-6 text-center">
-                                    <div class="container"
-                                        style="border-radius: 340px; background: radial-gradient(50% 50.00% at 50% 50.00%, #00D179 0%, rgba(30, 32, 34, 0.00) 100%);">
-                                        <img src="/img/flocard/crowd-of-users 1.svg" alt="">
-                                    </div>
-                                    <div>
-                                        <p>Community</p>
-                                    </div>
-                                </div>
-                                <div class="col col-lg-2 col-sm-4 text-center" style="margin-left: 50px; margin-top: 20px;">
-                                    <p style="border-radius: 50px; background: #56CB2D;">Pledge</p>
-                                    <p style="border-radius: 50px; background: #56CB2D;">Act</p>
-                                    <p style="border-radius: 50px; background: #26BDE2;">Associate</p>
-                                    <p style="border-radius: 50px; background: #BF8B2E;">NFT</p>
-                                </div>
+                            <div>
+                                <p>Community</p>
                             </div>
                         </div>
-                        
-
-                        <div
-                            style="height: 0.75rem; flex-shrink: 0; opacity: 0.2; background: radial-gradient(50% 50.00% at 50% 50.00%, #D9D9D9 0%, rgba(217, 217, 217, 0.00) 100%);">
+                        <div class="col col-lg-2 col-sm-4 text-center">
+                            <p style="border-radius: 50px; background: #56CB2D;">Pledge</p>
+                            <p style="border-radius: 50px; background: #56CB2D;">Act</p>
+                            <p style="border-radius: 50px; background: #26BDE2;">Associate</p>
+                            <p style="border-radius: 50px; background: #BF8B2E;">NFT</p>
                         </div>
+                    </div>
+                    <div style="padding-top: 50px;">
+                        <a href="">
+                            <p style="color: #00D179;text-align: center;">Learn More</p>
+                        </a>
+                    </div>
+                </div>
+                <!-- ========== END COLLABORATIONS ========== -->
 
-                        <div class="container section">
-                            <h1 class="text-center">Monthly Challenges</h1>
-                            <div class="row" style="margin-top: 2em;">
-                                <div class="col-lg-4">
-                                    <img src="/img/flocard/monchall.png" alt="" style="width: 200px;">
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="row">
-                                        <p><b>Calling All Planet Protectors:</b></p>
-                                        <p>Join Our Monthly Sustainability Showdown</p>
-                                    </div>
 
-                                    <div class="row">
-                                        <p><b>#JUNE 2023</b></p>
-                                        <p>The responsibility lies with us to initiate transformative actions and
-                                            safeguard our planet.</p>
-                                    </div>
-                                </div>
+                <div
+                    style="height: 0.75rem; flex-shrink: 0; opacity: 0.2; background: radial-gradient(50% 50.00% at 50% 50.00%, #D9D9D9 0%, rgba(217, 217, 217, 0.00) 100%);">
+                </div>
+
+                <!-- ========== MONTHLY CHALLENGES ========== -->
+                <div class="container section">
+                    <h1 class="text-center">Monthly Challenges</h1>
+                    <div class="row" style="margin-top: 2em;">
+                        <div class="col-lg-4">
+                            <img src="/img/flocard/monchall.png" alt="" style="width: 200px;">
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <p><b>Calling All Planet Protectors:</b></p>
+                                <p>Join Our Monthly Sustainability Showdown</p>
                             </div>
 
-
-                        </div>
-
-                        <div
-                            style="height: 0.75rem; flex-shrink: 0; opacity: 0.2; background: radial-gradient(50% 50.00% at 50% 50.00%, #D9D9D9 0%, rgba(217, 217, 217, 0.00) 100%);">
-                        </div>
-
-                        <div class="container section">
-                            <h1 class="text-center">Highlights</h1>
-                            <div class="row" style="margin-top: 2em;">
-                                <div class="col-md-6">
-                                    <p>Community in Action</p>
-                                    <div class="container" style="width: 100%; padding-bottom: 60%; background-color: #666;"></div>
-                                </div>
-                                <div class="col-md-6">
-                                    <p>#BetterPlanetTogether</p>
-                                    <div class="container" style="width: 100%; padding-bottom: 60%; background-color: #666;"></div>
-                                </div>
-                        
+                            <div class="row">
+                                <p><b>#JUNE 2023</b></p>
+                                <p>The responsibility lies with us to initiate transformative actions and
+                                    safeguard our planet.</p>
                             </div>
                         </div>
 
-
-
+                    </div>
+                    <div style="padding-top: 50px;">
+                        <a href="">
+                            <p style="color: #00D179;text-align: center;">Learn More</p>
+                        </a>
                     </div>
 
 
                 </div>
+                <!-- ========== END MONTHLY CHALLENGES ========== -->
+
+                <div
+                    style="height: 0.75rem; flex-shrink: 0; opacity: 0.2; background: radial-gradient(50% 50.00% at 50% 50.00%, #D9D9D9 0%, rgba(217, 217, 217, 0.00) 100%);">
+                </div>
+
+                <!-- ========== HIGHLIGHTS ========== -->
+                <div class="container section">
+                    <h1 class="text-center">Highlights</h1>
+                    <div class="row" style="margin-top: 2em;">
+                        <div class="col-md-6" style="padding-top: 1em;">
+                            <h3>Community in Action</h3>
+                            <div class="container"
+                                style="width: 100%; padding-bottom: 60%; height: 500px; overflow-y: auto;">
+                                <a style="height: 500px;" class="twitter-timeline"
+                                    href="https://twitter.com/sdg_impact?ref_src=twsrc%5Etfw"
+                                    data-tweet-limit="2">Tweets by sdg_impact</a>
+                                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6" style="padding-top: 1em;">
+                            <h3>#BetterPlanetTogether</h3>
+                            <div class="container"
+                                style="width: 100%; height: 500px; padding-bottom: 60%; overflow-y: auto;">
+                                <div class='sk-ww-twitter-hashtag-feed' data-embed-id='183782'></div>
+                                <script src='https://widgets.sociablekit.com/twitter-hashtag-feed/widget.js' async
+                                    defer></script>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div style="padding-top: 50px;">
+                        <a href="">
+                            <p style="color: #00D179;text-align: center;">See More</p>
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- ========== END HIGHLIGHTS ========== -->
+
+
+            </div>
+
+
+            </div>
+            <!-- ========== END CONTENT ========== -->
             </div>
         </main>
     </body>
@@ -1008,6 +1089,8 @@
     <script>
         if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="~/homeassets/vendor/babel-polyfill/dist/polyfill.js"><\/script>');
     </script>
+
+    <!-- ========== HOVER PREVIEW FEATURE SCRIPT ========== -->
     <script>
         const imageContainers = document.querySelectorAll('.sdg-image');
         const previewContent = document.querySelector('.preview-content');
@@ -1038,6 +1121,7 @@
 
 
     </script>
+
 </body>
 
 </html>
