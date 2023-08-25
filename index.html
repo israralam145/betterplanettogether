@@ -3,7 +3,7 @@
 
 <head>
     <!-- Title -->
-    <title>Better Planet Together</title>
+    <title>Know SDGs</title>
 
     <!-- Required Meta Tags Always Come First -->
     <meta charset="utf-8">
@@ -12,8 +12,13 @@
     <meta name="keywords" content="">
     <meta name="robots" content="index, follow">
     <meta http-equiv="content-language" content="en">
-
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <!-- Include Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.2/dist/js/bootstrap.bundle.min.js"></script>
 
 
     <!-- Favicon -->
@@ -195,6 +200,11 @@
                 /* Add ellipsis (...) for truncated text */
             }
 
+            .row {
+                margin-left: 0px;
+
+            }
+
             .col {
                 flex-grow: 0;
             }
@@ -206,6 +216,53 @@
 
             .sdg-image img {
                 padding: 0;
+            }
+
+            .carousel-control-prev {
+                left: 0px !important;
+                top: 0px !important;
+            }
+
+            .carousel-control-next {
+                right: 0px !important;
+                top: 0px !important;
+            }
+
+            .accordion {
+                --bs-accordion-border-width: 0;
+                --bs-accordion-bg: 0;
+                min-height: 150px;
+            }
+
+            .accordion-body {
+                padding: 0px;
+            }
+
+            .accordion-body {
+                display: none;
+            }
+
+            /* Show accordion body when the parent button is hovered */
+            .accordion-item:hover .accordion-body {
+                display: block;
+            }
+
+            .accordion p {
+                color: #fff;
+                font-size: 16px !important;
+            }
+
+            .accordion-header button {
+                height: 32px !important;
+                margin: 20px;
+                width: 100px !important;
+                font-size: 20px !important;
+                color: #000 !important;
+                border-radius: 50px !important;
+            }
+
+            button:hover {
+                opacity: 0.7;
             }
 
             /* Hide desktop-sdg on mobile view */
@@ -225,6 +282,12 @@
                 #Collaborations img {
                     width: 100px;
                 }
+
+                .twitter-container {
+                    padding-bottom: 60%;
+                    /* Adjust this value as needed */
+                    height: auto;
+                }
             }
 
             /* Hide mobile-sdg on desktop view */
@@ -237,10 +300,20 @@
                     margin-left: 25%;
                     margin-right: 25%;
                 }
-            }
 
-            .text-body {
-                color: #fff !important;
+                .accordion-button {
+                    pointer-events: none;
+
+                }
+
+                .accordion-item:hover .accordion-button {
+                    pointer-events: none;
+                    opacity: 0.5;
+                }
+
+                .text-body {
+                    color: #fff !important;
+                }
             }
         </style>
         <main id="content" role="main">
@@ -382,9 +455,11 @@
                     <!-- ========== MOBILE SDG VIEW ========== -->
                     <div id="mobile-sdg" style="padding-top: 2em; padding-bottom: 2em;" class="row">
                         <div class="col-lg-12">
-
-
-
+                            <style>
+                                .text-body {
+                                    color: #fff !important;
+                                }
+                            </style>
 
 
                             <div class="col-lg-6">
@@ -840,27 +915,549 @@
                 </div>
 
                 <!-- ========== COLLABORATIONS ========== -->
-                <div id="Collaborations"
-                    class="container section text-center align-items-center justify-content-center">
+                <div id="Collaborations" class="container section text-center">
                     <h1>Collaborations</h1>
-                    <div class="row col-sm-12 col-lg-12"
-                        style="width: 100%; display: flex; justify-content: center; align-items: center; margin-top: 2em;">
-                        <div class="col col-lg-4 col-sm-6 text-center">
-                            <div class="container"
-                                style="border-radius: 340px; background: radial-gradient(50% 50.00% at 50% 50.00%, #00D179 0%, rgba(30, 32, 34, 0.00) 100%);">
-                                <img src="/img/flocard/crowd-of-users 1.svg" alt="">
+                    <div>
+                        <div id="carouselExample" class="carousel slide">
+                            <div class="carousel-inner">
+                                <!-- carousel individual -->
+                                <div class="carousel-item active">
+
+                                    <div class="row col-sm-12 col-lg-12"
+                                        style="width: 100%; display: flex; justify-content: center; ">
+                                        <div
+                                            class="col col-lg-3 col-sm-6 text-center d-flex flex-column justify-content-center align-items-center">
+                                            <div class="container"
+                                                style="border-radius: 340px; background: radial-gradient(50% 50.00% at 50% 50.00%, #00D179 0%, rgba(30, 32, 34, 0.00) 100%);">
+                                                <img src="/img/flocard/user-2 1.svg" alt="">
+                                            </div>
+                                            <div>
+                                                <p>Individuals</p>
+                                            </div>
+                                        </div>
+                                        <div class="col col-lg-6 col-sm-12 col-md-12 text-center">
+                                            <div class="accordion d-flex flex-column justify-content-center align-items-center"
+                                                id="collabIndividual">
+
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header d-flex justify-content-center">
+
+                                                        <button type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#indPledge" aria-expanded="false"
+                                                            aria-controls="indPledge"
+                                                            class="accordion-button collapsed center btn btn-icon btn-sm btn-ghost-secondary toggle-accordion"
+                                                            aria-label="" style="background-color: #00D179 !important;">
+                                                            Pledge
+                                                        </button>
+                                                    </h2>
+                                                    <div id="indPledge" class=" accordion-collapse collapse show"
+                                                        data-bs-parent="#collabIndividual">
+                                                        <div class="accordion-body">
+                                                            <p id="accordionText">Take a pledge to adopt sustainability
+                                                                in your daily lives.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header d-flex justify-content-center">
+                                                        <button type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#indCreate" aria-expanded="false"
+                                                            aria-controls="indCreate"
+                                                            class="accordion-button collapsed center btn btn-icon btn-sm btn-ghost-secondary toggle-accordion"
+                                                            aria-label="" style="background-color: #26BDE2 !important;">
+                                                            Create
+                                                        </button>
+                                                    </h2>
+                                                    <div id="indCreate" class=" accordion-collapse collapse show"
+                                                        data-bs-parent="#collabIndividual">
+                                                        <div class="accordion-body">
+                                                            <p id="accordionText"> Create your own version of
+                                                                sustainable actions to support the #betterplanettogether
+                                                                campaign. </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header d-flex justify-content-center">
+
+                                                        <button type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#indInvolve" aria-expanded="false"
+                                                            aria-controls="indInvolve"
+                                                            class="accordion-button collapsed center btn btn-icon btn-sm btn-ghost-secondary toggle-accordion"
+                                                            aria-label="" style="background-color: #BF8B2E !important;">
+                                                            Involve
+                                                        </button>
+                                                    </h2>
+                                                    <div id="indInvolve" class=" accordion-collapse collapse show"
+                                                        data-bs-parent="#collabIndividual">
+                                                        <div class="accordion-body">
+                                                            <p id="accordionText">Involve and communicate amongst your
+                                                                peer groups at your workplace and other surroundings.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- carousel institutions -->
+                                <div class="carousel-item">
+                                    <div class="row col-sm-12 col-lg-12"
+                                        style="width: 100%; display: flex; justify-content: center; ">
+                                        <div
+                                            class="col col-lg-3 col-sm-6 text-center d-flex flex-column justify-content-center align-items-center">
+                                            <div class="container"
+                                                style="border-radius: 340px; background: radial-gradient(50% 50.00% at 50% 50.00%, #00D179 0%, rgba(30, 32, 34, 0.00) 100%);">
+                                                <img src="/img/flocard/org.svg" alt="">
+                                            </div>
+                                            <div>
+                                                <p>Institution</p>
+                                            </div>
+                                        </div>
+                                        <div class="col col-lg-6 col-sm-12 col-md-12 text-center">
+                                            <div class="accordion d-flex flex-column justify-content-center align-items-center"
+                                                id="collabInstitution">
+
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header d-flex justify-content-center">
+
+                                                        <button type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#insPledge" aria-expanded="false"
+                                                            aria-controls="insPledge"
+                                                            class="accordion-button collapsed center btn btn-icon btn-sm btn-ghost-secondary toggle-accordion"
+                                                            aria-label="" style="background-color: #00D179 !important;">
+                                                            Pledge
+                                                        </button>
+                                                    </h2>
+                                                    <div id="insPledge" class=" accordion-collapse collapse show"
+                                                        data-bs-parent="#collabInstitution">
+                                                        <div class="accordion-body">
+                                                            <p id="accordionText">Take the pledge to adopt
+                                                                sustainability in every institutional activity, big or
+                                                                small.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header d-flex justify-content-center">
+                                                        <button type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#insEducate" aria-expanded="false"
+                                                            aria-controls="insEducate"
+                                                            class="accordion-button collapsed center btn btn-icon btn-sm btn-ghost-secondary toggle-accordion"
+                                                            aria-label="" style="background-color: #FCC30B !important;">
+                                                            Educate
+                                                        </button>
+                                                    </h2>
+                                                    <div id="insEducate" class=" accordion-collapse collapse show"
+                                                        data-bs-parent="#collabInstitution">
+                                                        <div class="accordion-body">
+                                                            <p id="accordionText"> Raise awareness about the impact of
+                                                                small actions on the planet through internal and
+                                                                external outreach programmes. </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header d-flex justify-content-center">
+
+                                                        <button type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#insSpread" aria-expanded="false"
+                                                            aria-controls="insSpread"
+                                                            class="accordion-button collapsed center btn btn-icon btn-sm btn-ghost-secondary toggle-accordion"
+                                                            aria-label="" style="background-color: #FD6925 !important;">
+                                                            Spread
+                                                        </button>
+                                                    </h2>
+                                                    <div id="insSpread" class=" accordion-collapse collapse show"
+                                                        data-bs-parent="#collabInstitution">
+                                                        <div class="accordion-body">
+                                                            <p id="accordionText">Promote these sustainable practices
+                                                                adopted by the institution with the impactful audience,
+                                                                stakeholders, participants, or any other member of the
+                                                                institution.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header d-flex justify-content-center">
+                                                        <button type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#insShare" aria-expanded="false"
+                                                            aria-controls="insShare"
+                                                            class="accordion-button collapsed center btn btn-icon btn-sm btn-ghost-secondary toggle-accordion"
+                                                            aria-label="" style="background-color: #BF8B2E !important;">
+                                                            Share
+                                                        </button>
+                                                    </h2>
+                                                    <div id="insShare" class=" accordion-collapse collapse show"
+                                                        data-bs-parent="#collabInstitution">
+                                                        <div class="accordion-body">
+                                                            <p id="accordionText">Share your stories of sustainable
+                                                                activities adopted as an institution for others to get
+                                                                motivated and inspired by the actions for a better
+                                                                planet. </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- carousel community -->
+                                <div class="carousel-item">
+                                    <div class="row col-sm-12 col-lg-12"
+                                        style="width: 100%; display: flex; justify-content: center; ">
+                                        <div
+                                            class="col col-lg-3 col-sm-6 text-center d-flex flex-column justify-content-center align-items-center">
+                                            <div class="container"
+                                                style="border-radius: 340px; background: radial-gradient(50% 50.00% at 50% 50.00%, #00D179 0%, rgba(30, 32, 34, 0.00) 100%);">
+                                                <img src="/img/flocard/crowd-of-users 1.svg" alt="">
+                                            </div>
+                                            <div>
+                                                <p>Community</p>
+                                            </div>
+                                        </div>
+                                        <div class="col col-lg-6 col-sm-12 col-md-12 text-center">
+                                            <div class="accordion d-flex flex-column justify-content-center align-items-center"
+                                                id="collabCommunity">
+
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header d-flex justify-content-center">
+
+                                                        <button type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#comPledge" aria-expanded="false"
+                                                            aria-controls="comPledge"
+                                                            class="accordion-button collapsed center btn btn-icon btn-sm btn-ghost-secondary toggle-accordion"
+                                                            aria-label="" style="background-color: #00D179 !important;">
+                                                            Pledge
+                                                        </button>
+                                                    </h2>
+                                                    <div id="comPledge" class=" accordion-collapse collapse show"
+                                                        data-bs-parent="#collabCommunity">
+                                                        <div class="accordion-body">
+                                                            <p id="accordionText">Take a pledge to adopt sustainability
+                                                                in every community activity.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header d-flex justify-content-center">
+                                                        <button type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#comAct" aria-expanded="false"
+                                                            aria-controls="comAct"
+                                                            class="accordion-button collapsed center btn btn-icon btn-sm btn-ghost-secondary toggle-accordion"
+                                                            aria-label="" style="background-color: #00D179 !important;">
+                                                            Act
+                                                        </button>
+                                                    </h2>
+                                                    <div id="comAct" class=" accordion-collapse collapse show"
+                                                        data-bs-parent="#collabCommunity">
+                                                        <div class="accordion-body">
+                                                            <p id="accordionText">Adopt sustainable practices, raise
+                                                                awareness, and collaborate, nurturing a greener future
+                                                                where every individual's contribution counts. </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header d-flex justify-content-center">
+
+                                                        <button type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#indAssociate" aria-expanded="false"
+                                                            aria-controls="indAssociate"
+                                                            class="accordion-button collapsed center btn btn-icon btn-sm btn-ghost-secondary toggle-accordion"
+                                                            aria-label="" style="background-color: #26BDE2 !important;">
+                                                            Associate
+                                                        </button>
+                                                    </h2>
+                                                    <div id="indAssociate" class=" accordion-collapse collapse show"
+                                                        data-bs-parent="#collabCommunity">
+                                                        <div class="accordion-body">
+                                                            <p id="accordionText">Not Specified
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header d-flex justify-content-center">
+
+                                                        <button type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#indNFT" aria-expanded="false"
+                                                            aria-controls="indNFT"
+                                                            class="accordion-button collapsed center btn btn-icon btn-sm btn-ghost-secondary toggle-accordion"
+                                                            aria-label="" style="background-color: #BF8B2E !important;">
+                                                            NFT
+                                                        </button>
+                                                    </h2>
+                                                    <div id="indNFT" class=" accordion-collapse collapse show"
+                                                        data-bs-parent="#collabCommunity">
+                                                        <div class="accordion-body">
+                                                            <p id="accordionText"> One of the ways to reward the people
+                                                                working at the grass root levels in agriculture,
+                                                                forestation and the unorganised sectors.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- carousel corporate -->
+                                <div class="carousel-item">
+                                    <div class="row col-sm-12 col-lg-12"
+                                        style="width: 100%; display: flex; justify-content: center; ">
+                                        <div
+                                            class="col col-lg-3 col-sm-6 text-center d-flex flex-column justify-content-center align-items-center">
+                                            <div class="container"
+                                                style="border-radius: 340px; background: radial-gradient(50% 50.00% at 50% 50.00%, #00D179 0%, rgba(30, 32, 34, 0.00) 100%);">
+                                                <img src="/img/flocard/corporate-2 1.svg" alt="">
+                                            </div>
+                                            <div>
+                                                <p>Corporate</p>
+                                            </div>
+                                        </div>
+                                        <div class="col col-lg-6 col-sm-12 col-md-12 text-center">
+                                            <div class="accordion d-flex flex-column justify-content-center align-items-center"
+                                                id="collabCorp">
+
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header d-flex justify-content-center">
+
+                                                        <button type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#corpPledge" aria-expanded="false"
+                                                            aria-controls="corpPledge"
+                                                            class="accordion-button collapsed center btn btn-icon btn-sm btn-ghost-secondary toggle-accordion"
+                                                            aria-label="" style="background-color: #00D179 !important;">
+                                                            Pledge
+                                                        </button>
+                                                    </h2>
+                                                    <div id="corpPledge" class=" accordion-collapse collapse show"
+                                                        data-bs-parent="#collabCorp">
+                                                        <div class="accordion-body">
+                                                            <p id="accordionText">Make a pledge to adopt sustainability
+                                                                in every corporate activity.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header d-flex justify-content-center">
+
+                                                        <button type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#corpAct" aria-expanded="false"
+                                                            aria-controls="corpAct"
+                                                            class="accordion-button collapsed center btn btn-icon btn-sm btn-ghost-secondary toggle-accordion"
+                                                            aria-label="" style="background-color: #00D179 !important;">
+                                                            Act
+                                                        </button>
+                                                    </h2>
+                                                    <div id="corpAct" class=" accordion-collapse collapse show"
+                                                        data-bs-parent="#collabCorp">
+                                                        <div class="accordion-body">
+                                                            <p id="accordionText">Take the pledge to adopt
+                                                                sustainability in every institutional activity, big or
+                                                                small. </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header d-flex justify-content-center">
+                                                        <button type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#corpAssociate" aria-expanded="false"
+                                                            aria-controls="corpAssociate"
+                                                            class="accordion-button collapsed center btn btn-icon btn-sm btn-ghost-secondary toggle-accordion"
+                                                            aria-label="" style="background-color: #26BDE2 !important;">
+                                                            Associate
+                                                        </button>
+                                                    </h2>
+                                                    <div id="corpAssociate" class=" accordion-collapse collapse show"
+                                                        data-bs-parent="#collabCorp">
+                                                        <div class="accordion-body">
+                                                            <p id="accordionText">Share your stories of sustainable
+                                                                activities adopted as an institution for others to get
+                                                                motivated and inspired by the actions for a better
+                                                                planet. </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header d-flex justify-content-center">
+
+                                                        <button type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#corpNFT" aria-expanded="false"
+                                                            aria-controls="corpNFT"
+                                                            class="accordion-button collapsed center btn btn-icon btn-sm btn-ghost-secondary toggle-accordion"
+                                                            aria-label="" style="background-color: #BF8B2E !important;">
+                                                            NFT
+                                                        </button>
+                                                    </h2>
+                                                    <div id="corpNFT" class=" accordion-collapse collapse show"
+                                                        data-bs-parent="#collabCorp">
+                                                        <div class="accordion-body">
+                                                            <p id="accordionText">Not Specified
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- carousel media -->
+                                <div class="carousel-item">
+                                    <div class="row col-sm-12 col-lg-12"
+                                        style="width: 100%; display: flex; justify-content: center; ">
+                                        <div
+                                            class="col col-lg-3 col-sm-6 text-center d-flex flex-column justify-content-center align-items-center">
+                                            <div class="container"
+                                                style="border-radius: 340px; background: radial-gradient(50% 50.00% at 50% 50.00%, #00D179 0%, rgba(30, 32, 34, 0.00) 100%);">
+                                                <img src="/img/flocard/promotion 1.svg" alt="">
+                                            </div>
+                                            <div>
+                                                <p>Media</p>
+                                            </div>
+                                        </div>
+                                        <div class="col col-lg-6 col-sm-12 col-md-12 text-center">
+                                            <div class="accordion d-flex flex-column justify-content-center align-items-center"
+                                                id="collabMedia">
+
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header d-flex justify-content-center">
+
+                                                        <button type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#medPledge" aria-expanded="false"
+                                                            aria-controls="medPledge"
+                                                            class="accordion-button collapsed center btn btn-icon btn-sm btn-ghost-secondary toggle-accordion"
+                                                            aria-label="" style="background-color: #00D179 !important;">
+                                                            Pledge
+                                                        </button>
+                                                    </h2>
+                                                    <div id="medPledge" class=" accordion-collapse collapse show"
+                                                        data-bs-parent="#collabMedia">
+                                                        <div class="accordion-body">
+                                                            <p id="accordionText">Not Specified</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header d-flex justify-content-center">
+                                                        <button type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#medAct" aria-expanded="false"
+                                                            aria-controls="medAct"
+                                                            class="accordion-button collapsed center btn btn-icon btn-sm btn-ghost-secondary toggle-accordion"
+                                                            aria-label="" style="background-color: #26BDE2 !important;">
+                                                            Act
+                                                        </button>
+                                                    </h2>
+                                                    <div id="medAct" class=" accordion-collapse collapse show"
+                                                        data-bs-parent="#collabMedia">
+                                                        <div class="accordion-body">
+                                                            <p id="accordionText">Not Specified</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header d-flex justify-content-center">
+
+                                                        <button type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#medAssociate" aria-expanded="false"
+                                                            aria-controls="medAssociate"
+                                                            class="accordion-button collapsed center btn btn-icon btn-sm btn-ghost-secondary toggle-accordion"
+                                                            aria-label="" style="background-color: #BF8B2E !important;">
+                                                            Associate
+                                                        </button>
+                                                    </h2>
+                                                    <div id="medAssociate" class=" accordion-collapse collapse show"
+                                                        data-bs-parent="#collabMedia">
+                                                        <div class="accordion-body">
+                                                            <p id="accordionText">Not Specified
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header d-flex justify-content-center">
+
+                                                        <button type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#medAmplify" aria-expanded="false"
+                                                            aria-controls="medAmplify"
+                                                            class="accordion-button collapsed center btn btn-icon btn-sm btn-ghost-secondary toggle-accordion"
+                                                            aria-label="" style="background-color: #BF8B2E !important;">
+                                                            Amplify
+                                                        </button>
+                                                    </h2>
+                                                    <div id="medAmplify" class=" accordion-collapse collapse show"
+                                                        data-bs-parent="#collabMedia">
+                                                        <div class="accordion-body">
+                                                            <p id="accordionText">Not Specified
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- carousel government -->
+                                <div class="carousel-item">
+                                    <div class="row col-sm-12 col-lg-12"
+                                        style="width: 100%; display: flex; justify-content: center; ">
+                                        <div
+                                            class="col col-lg-3 col-sm-6 text-center d-flex flex-column justify-content-center align-items-center">
+                                            <div class="container"
+                                                style="border-radius: 340px; background: radial-gradient(50% 50.00% at 50% 50.00%, #00D179 0%, rgba(30, 32, 34, 0.00) 100%);">
+                                                <img src="/img/flocard/government-4 2.svg" alt="">
+                                            </div>
+                                            <div>
+                                                <p>Government</p>
+                                            </div>
+                                        </div>
+                                        <div class="col col-lg-6 col-sm-12 col-md-12 text-center">
+                                            <div class="accordion d-flex flex-column justify-content-center align-items-center"
+                                                id="collabGovt">
+
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header d-flex justify-content-center">
+
+                                                        <button type="button" data-bs-toggle="collapse"
+                                                            data-bs-target="#govtSupport" aria-expanded="false"
+                                                            aria-controls="govtSupport"
+                                                            class="accordion-button collapsed center btn btn-icon btn-sm btn-ghost-secondary toggle-accordion"
+                                                            aria-label="" style="background-color: #A21942 !important;">
+                                                            Support
+                                                        </button>
+                                                    </h2>
+                                                    <div id="govtSupport" class=" accordion-collapse collapse show"
+                                                        data-bs-parent="#collabIndividual">
+                                                        <div class="accordion-body">
+                                                            <p id="accordionText">Better planet together is also about
+                                                                enabling governments across the globe formulate an
+                                                                environment positive policy.Write a letter to the
+                                                                Government of your country. </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div>
-                                <p>Community</p>
-                            </div>
-                        </div>
-                        <div class="col col-lg-2 col-sm-4 text-center">
-                            <p style="border-radius: 50px; background: #56CB2D;">Pledge</p>
-                            <p style="border-radius: 50px; background: #56CB2D;">Act</p>
-                            <p style="border-radius: 50px; background: #26BDE2;">Associate</p>
-                            <p style="border-radius: 50px; background: #BF8B2E;">NFT</p>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
                         </div>
                     </div>
+
+
                     <div style="padding-top: 50px;">
                         <a href="">
                             <p style="color: #00D179;text-align: center;">Learn More</p>
@@ -915,21 +1512,19 @@
                     <div class="row" style="margin-top: 2em;">
                         <div class="col-md-6" style="padding-top: 1em;">
                             <h3>Community in Action</h3>
-                            <div class="container"
-                                style="width: 100%; padding-bottom: 60%; height: 500px; overflow-y: auto;">
-                                <a class="twitter-timeline"
-                                    href="https://twitter.com/sdg_impact?ref_src=twsrc%5Etfw"
-                                    data-tweet-limit="2">Tweets by sdg_impact</a>
+                            <div class="container twitter-container"
+                                style="width: 100%; padding-bottom: 60%; overflow-y: auto;">
+                                <a class="twitter-timeline" data-lang="en" data-height="500" data-theme="light"
+                                    href="https://twitter.com/sdg_impact?ref_src=twsrc%5Etfw">Tweets by sdg_impact</a>
                                 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
                             </div>
                         </div>
                         <div class="col-md-6" style="padding-top: 1em;">
                             <h3>#BetterPlanetTogether</h3>
                             <div class="container"
                                 style="width: 100%; height: 500px; padding-bottom: 60%; overflow-y: auto;">
-                                <!-- change the below div and script. get your own embed code in socialablekit.com -->
-                                <div class='sk-ww-twitter-hashtag-feed' data-embed-id='183782'></div>
+                                <div class='sk-ww-twitter-hashtag-feed' data-embed-id='183782'
+                                    style="border-radius: 12px;"></div>
                                 <script src='https://widgets.sociablekit.com/twitter-hashtag-feed/widget.js' async
                                     defer></script>
                             </div>
